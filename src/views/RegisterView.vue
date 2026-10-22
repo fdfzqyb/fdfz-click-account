@@ -76,7 +76,7 @@ async function submit() {
     <h1>{{ t('註冊新帳號') }}</h1>
   </header>
   <form class="page stack" @submit.prevent="submit">
-    <p class="muted">{{ t('填寫資料並上傳校園卡照片。經權益部審核後，帳號才會開通，權益牆、樹洞、前帆報都能用。') }}</p>
+    <p class="muted">{{ t('填寫資料並上傳校園卡照片。經權益部審核後，帳號才會開通，所有 fdfz.click 網站都能用。') }}</p>
     <label class="field"><span>{{ t('姓名') }}</span><input v-model="form.name" required /></label>
     <label class="field">
       <span>{{ t('學號') }}</span>

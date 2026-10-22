@@ -5,11 +5,10 @@ export const VERIFY_LABEL = { pending: '待審核', approved: '已通過', rejec
 export const CARD_FILE = 'card.jpg'
 export const cardPath = (userId) => `${userId}/${CARD_FILE}`
 
-// 「我的帳號」頁列出的各站。soon：還沒上線，只顯示不給點
+// 「我的帳號」頁列出的各站，只放已經上線的；新站上線後加一行
 export const SITES = [
   { name: 'fdfz權益牆', url: 'https://wall.fdfz.click', desc: '把校園生活裡遇到的問題告訴權益部' },
   { name: 'FDFZ 樹洞', url: 'https://hole.fdfz.click', desc: '匿名說出想說的話，有受過培訓的同學聽你說' },
-  { name: '前帆報', url: 'https://foresail.fdfz.click', desc: '校園刊物，讀文章、投稿', soon: true },
 ]
 
 // 「登入後會回到…」顯示的站名：認得的站用中文名，其他就顯示網域

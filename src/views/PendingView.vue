@@ -70,7 +70,7 @@ async function logout() {
     </template>
     <template v-else>
       <h1>{{ t('正在等待審核') }}</h1>
-      <p class="muted">{{ t('權益部核對你的校園卡後，權益牆、樹洞、前帆報就都能使用。') }}</p>
+      <p class="muted">{{ t('權益部核對你的校園卡後，所有 fdfz.click 網站就都能使用。') }}</p>
     </template>
 
     <div class="card steps">

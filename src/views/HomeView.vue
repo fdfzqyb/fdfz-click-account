@@ -70,11 +70,11 @@ async function logout() {
       <h2 id="sites-heading">{{ t('可以用這個帳號的網站') }}</h2>
       <ul class="sites">
         <li v-for="s in SITES" :key="s.url">
-          <component :is="s.soon ? 'div' : 'a'" :href="s.soon ? undefined : s.url" class="site" :class="{ soon: s.soon }">
+          <a :href="s.url" class="site">
             <strong>{{ t(s.name) }}</strong>
-            <span class="muted small">{{ s.soon ? t('即將上線') : s.url.replace('https://', '') }}</span>
+            <span class="muted small">{{ s.url.replace('https://', '') }}</span>
             <span class="muted small">{{ t(s.desc) }}</span>
-          </component>
+          </a>
         </li>
       </ul>
     </section>
@@ -125,7 +125,6 @@ h2 { font-size: 18px; }
   border: 1px solid var(--border); border-radius: 12px; color: var(--ink);
 }
 a.site:hover { border-color: var(--primary); }
-.site.soon { opacity: .6; }
 .language-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .language-options .btn { padding: 12px 8px; }
 .language-options .btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }

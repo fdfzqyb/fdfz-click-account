@@ -31,7 +31,7 @@ async function submit() {
   <div class="page login">
     <img src="/logo.svg" alt="" class="logo" />
     <h1 class="center">{{ t('FDFZ click 帳號登錄') }}</h1>
-    <p class="center muted">{{ t('權益牆、樹洞、前帆報共用一個帳號，登入一次就全部可以用。') }}</p>
+    <p class="center muted">{{ t('所有 fdfz.click 網站共用一個帳號，登入一次就全部可以用。') }}</p>
     <p v-if="from" class="note center">{{ t('登入後會回到{site}', { site: t(from) }) }}</p>
 
     <form class="stack" @submit.prevent="submit">
