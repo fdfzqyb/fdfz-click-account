@@ -101,7 +101,7 @@ async function logout() {
 
 <style scoped>
 .pending { padding-top: 48px; }
-.clock { width: 64px; height: 64px; border-radius: 50%; background: #dde9f7; display: grid; place-items: center; color: var(--navy); }
+.clock { width: 64px; height: 64px; border-radius: 50%; background: var(--primary-soft); display: grid; place-items: center; color: var(--primary); }
 h1 { font-size: 26px; margin: 20px 0 8px; }
 .steps { margin: 24px 0; display: grid; gap: 18px; }
 .step { display: flex; gap: 14px; }
@@ -109,7 +109,7 @@ h1 { font-size: 26px; margin: 20px 0 8px; }
   flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
   border: 2px solid var(--border); color: var(--muted); font-size: 14px;
 }
-.step.done b { background: #1e6b3a; border-color: #1e6b3a; color: var(--white); }
+.step.done b { background: var(--ok); border-color: var(--ok); color: var(--white); }
 .step p { margin: 2px 0 8px; }
 .upload { position: relative; }
 .upload input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }

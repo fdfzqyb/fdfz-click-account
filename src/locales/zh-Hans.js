@@ -2,7 +2,7 @@
 export const simplified = {
   '8 位數字，也可以用來登入': '8 位数字，也可以用来登录',
   'FDFZ 樹洞': 'FDFZ 树洞',
-  'fdfz帳號': 'fdfz账号',
+  'FDFZ click 帳號登錄': 'FDFZ click 账号登录',
   'fdfz權益牆': 'fdfz权益墙',
   '上傳失敗，請稍後再試（{error}）': '上传失败，请稍后再试（{error}）',
   '上傳校園卡照片': '上传校园卡照片',

@@ -1,25 +1,29 @@
-/* 顏色沿用權益牆，同學看到會覺得是同一套帳號 */
+/* 配色：要換色只改這一段。public/logo.svg 和 index.html 的 theme-color 也要跟著換 */
 :root {
-  --navy: #294874;
-  --navy-dark: #1f3a60;
-  --orange: #e8935a;
-  --cream: #fff7ee;
-  --cream-deep: #fdebd8;
-  --cream-logo: #ffecce;
-  --border: #f1dec9;
-  --ink: #1d2733;
-  --muted: #6b6560;
+  /* Gerard 的家族色號：#F3EEE4 米白、#1F1B16 墨黑、#1E3D32 墨綠、#8A4B2A 赭棕。其餘是由這四色調出的深淺 */
+  --primary: #1e3d32;      /* 主色：按鈕、連結、標題列圖示 */
+  --primary-dark: #152c24;
+  --primary-soft: #dfe7e1; /* 主色的淡色底 */
+  --accent: #8a4b2a;       /* 點綴色 */
+  --accent-light: #e6cdb9;
+  --bg: #f3eee4;           /* 頁面底色 */
+  --bg-soft: #e9e1d2;      /* 提示框 */
+  --bg-hero: #ebe4d6;      /* 登入頁底色 */
+  --border: #ddd3c1;
+  --ok: #1e3d32;
+  --ink: #1f1b16;
+  --muted: #6b6358;
   --white: #ffffff;
-  --danger: #c0392b;
+  --danger: #b3261e;
   --radius: 18px;
-  --shadow: 0 1px 2px rgba(120, 72, 30, .06), 0 6px 18px rgba(120, 72, 30, .08);
+  --shadow: 0 1px 2px rgba(31, 27, 22, .06), 0 6px 18px rgba(31, 27, 22, .08);
 }
 
 * { box-sizing: border-box; }
 
 html, body {
   margin: 0;
-  background: var(--cream);
+  background: var(--bg);
   color: var(--ink);
   font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
   font-size: 16px;
@@ -29,7 +33,7 @@ html, body {
 
 #app { max-width: 560px; margin: 0 auto; min-height: 100vh; }
 
-a { color: var(--navy); text-decoration: none; }
+a { color: var(--primary); text-decoration: none; }
 h1, h2, h3 { margin: 0; line-height: 1.3; }
 /* 標題用圓體「粉圓」，跟 logo 的手寫感比較搭；它只有一種字重 */
 h1, h2, h3 { font-family: "Huninn", "Noto Sans TC", sans-serif; font-weight: 400; }
@@ -54,7 +58,7 @@ input, textarea, select {
   background: var(--white);
   color: var(--ink);
 }
-input:focus, textarea:focus, select:focus { outline: 2px solid var(--navy); outline-offset: -1px; }
+input:focus, textarea:focus, select:focus { outline: 2px solid var(--primary); outline-offset: -1px; }
 textarea { min-height: 110px; resize: vertical; }
 
 /* 按鈕 */
@@ -63,16 +67,16 @@ textarea { min-height: 110px; resize: vertical; }
   font: inherit; font-weight: 600;
   padding: 12px 18px;
   border-radius: 12px;
-  border: 1px solid var(--navy);
-  background: var(--navy); color: var(--white);
+  border: 1px solid var(--primary);
+  background: var(--primary); color: var(--white);
   cursor: pointer;
 }
 /* 深色按鈕上的圖標：蜜桃色對比不夠，改用 logo 橘色，鏤空處用按鈕底色 */
-.btn { --icon-accent: var(--orange); --icon-hole: var(--navy); }
-.btn.ghost, .btn.plain, .btn.danger { --icon-accent: #ffd3a8; --icon-hole: var(--white); }
+.btn { --icon-accent: var(--accent); --icon-hole: var(--primary); }
+.btn.ghost, .btn.plain, .btn.danger { --icon-accent: var(--accent-light); --icon-hole: var(--white); }
 .btn:disabled { opacity: .55; cursor: default; }
 .btn.block { width: 100%; padding: 15px; }
-.btn.ghost { background: var(--white); color: var(--navy); }
+.btn.ghost { background: var(--white); color: var(--primary); }
 .btn.plain { background: var(--white); color: var(--ink); border-color: var(--border); font-weight: 500; }
 .btn.small { padding: 6px 12px; font-size: 14px; }
 .btn.danger { background: var(--white); color: var(--danger); border-color: var(--danger); }
@@ -86,7 +90,7 @@ textarea { min-height: 110px; resize: vertical; }
 }
 .note .ic { margin-right: 4px; }
 .note {
-  background: var(--cream-deep);
+  background: var(--bg-soft);
   border-radius: 12px;
   padding: 12px 14px;
   font-size: 14px;

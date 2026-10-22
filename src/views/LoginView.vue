@@ -30,7 +30,7 @@ async function submit() {
 <template>
   <div class="page login">
     <img src="/logo.svg" alt="" class="logo" />
-    <h1 class="center">{{ t('fdfz帳號') }}</h1>
+    <h1 class="center">{{ t('FDFZ click 帳號登錄') }}</h1>
     <p class="center muted">{{ t('權益牆、樹洞、前帆報共用一個帳號，登入一次就全部可以用。') }}</p>
     <p v-if="from" class="note center">{{ t('登入後會回到{site}', { site: t(from) }) }}</p>
 
@@ -58,11 +58,11 @@ async function submit() {
 /* 背景向兩側鋪滿整個視窗寬度 */
 .login {
   padding-top: 48px; min-height: 100vh;
-  background: var(--cream-logo);
-  box-shadow: 0 0 0 100vmax var(--cream-logo);
+  background: var(--bg-hero);
+  box-shadow: 0 0 0 100vmax var(--bg-hero);
   clip-path: inset(0 -100vmax);
 }
 .logo { display: block; width: 96px; height: 96px; margin: 0 auto 16px; }
 h1 { font-size: 30px; }
-.note { margin: 16px 0 24px; }
+.note { margin: 16px 0 24px; background: var(--white); }
 </style>

@@ -7,7 +7,7 @@ const reload = () => window.location.reload()
 
 watch(locale, (value) => {
   document.documentElement.lang = value
-  document.title = t('fdfz帳號')
+  document.title = t('FDFZ click 帳號登錄')
 }, { immediate: true })
 </script>
 

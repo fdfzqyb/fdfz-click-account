@@ -124,9 +124,9 @@ h2 { font-size: 18px; }
   display: grid; gap: 2px; padding: 12px 14px;
   border: 1px solid var(--border); border-radius: 12px; color: var(--ink);
 }
-a.site:hover { border-color: var(--navy); }
+a.site:hover { border-color: var(--primary); }
 .site.soon { opacity: .6; }
 .language-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .language-options .btn { padding: 12px 8px; }
-.language-options .btn:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+.language-options .btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
 </style>

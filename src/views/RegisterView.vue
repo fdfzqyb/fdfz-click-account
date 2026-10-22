@@ -119,7 +119,7 @@ async function submit() {
 .upload {
   position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
   min-height: 140px; padding: 16px; border: 1.5px dashed var(--border); border-radius: 14px;
-  background: var(--white); color: var(--navy); text-align: center;
+  background: var(--white); color: var(--primary); text-align: center;
 }
 .upload img { max-width: 100%; max-height: 220px; border-radius: 8px; }
 .upload input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }

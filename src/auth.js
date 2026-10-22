@@ -35,13 +35,11 @@ async function loadSession() {
 }
 
 // 在別的 fdfz.click 站登入或登出後，cookie 變了，但這個分頁不會收到通知；
-// 所以每次切回這個分頁都重新讀一次，換了人或被登出就更新畫面
+// 所以每次切回這個分頁都重新讀一次，換了人或被登出就重新載入，讓路由重新判斷該去哪
 async function recheck() {
   if (document.visibilityState !== 'visible') return
   const { data } = await supabase.auth.getSession()
-  if (data.session?.user.id === auth.session?.user.id) return
-  auth.session = data.session
-  await loadProfile()
+  if (data.session?.user.id !== auth.session?.user.id) location.reload()
 }
 
 export async function initAuth() {
