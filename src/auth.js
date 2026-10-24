@@ -99,6 +99,7 @@ export function rememberNext(value) {
 }
 
 export const pendingNext = () => sessionStorage.getItem(NEXT_KEY)
+export const forgetNext = () => sessionStorage.removeItem(NEXT_KEY)
 
 // 帳號可以用了（已審核、不用改密碼）就回到原來的站
 export function leaveTo(next) {
