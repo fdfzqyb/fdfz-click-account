@@ -6,8 +6,9 @@ export const CARD_FILE = 'card.jpg'
 export const cardPath = (userId) => `${userId}/${CARD_FILE}`
 
 // 「我的帳號」頁列出的各站，只放已經上線的；新站上線後加一行
+// closed：還沒開放，顯示成灰色、加「（未開通）」，不能點
 export const SITES = [
-  { name: 'FDFZ 權益牆', url: 'https://wall.fdfz.click', desc: '把校園生活裡遇到的問題告訴權益部' },
+  { name: 'FDFZ 權益牆', url: 'https://wall.fdfz.click', desc: '把校園生活裡遇到的問題告訴權益部', closed: true },
   { name: 'FDFZ 樹洞', url: 'https://hole.fdfz.click', desc: '匿名說出想說的話，有受過培訓的同學聽你說' },
   { name: 'FDFZ 社團活動', url: 'https://club.fdfz.click', desc: '各社團的活動公告，可以報名、關注社團' },
 ]
